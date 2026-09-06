@@ -38,11 +38,45 @@ We are a prototype-first, speed-focused agency. We don't sell a rigid menu — w
 - `context/` — business context docs (overview, brand, processes, decisions)
 - `leads/` — lead files, research, grading
 - `sessions/` — session logs (one per conversation)
-- `website/` — website source files (when built)
-- `outreach/` — email templates, booking info
+- `website/` — website source files
+- `outreach/` — outreach drafts per lead (email + prototype link)
+- `.claude/commands/` — team skills (slash commands)
+
+## Skills (Slash Commands)
+Team members run these instead of writing long prompts:
+
+| Command | What it does |
+|---------|-------------|
+| `/process-lead` | Research a new lead — gathers all info, assesses digital presence, creates lead file |
+| `/grade-leads` | Grade all ungraded leads as Hot / Warm / Keep |
+| `/generate-outreach` | Build prototype artifact + write personalized email for a specific lead |
+| `/send-outreach` | Send the outreach email via Gmail (confirms before sending) |
+| `/sync` | Sync everything — Gmail, Notion, local files. Shows full pipeline report |
+| `/pipeline` | Quick pipeline snapshot — no changes, just status |
+
+## Key Links
+- **Booking**: https://calendar.app.google/aYy6MJaq9zJAm7nQ9
+- **Email**: admin@simplifyops.dev
+- **Domain**: simplifyops.dev
+- **GitHub**: https://github.com/Tofunmi-Baller/simplifyops
+
+## Context Docs (read these for full detail)
+- `context/business-overview.md` — what we are and how we work
+- `context/brand-identity.md` — visual direction, tone, content rules
+- `context/contacts-and-links.md` — domain, email, booking, socials
+- `context/lead-process.md` — full lead pipeline and data structure
+- `context/grading-criteria.md` — how to classify leads (Hot/Warm/Keep)
+- `context/email-templates.md` — outreach email structure and rules
+- `context/prototype-process.md` — how to build lead prototypes
 
 ## Session Protocol
 After every session, update:
 1. The session log in `sessions/` with what was covered
 2. Any context docs that gained new information
 3. Keep everything current so the next session starts with full context
+
+## For New Team Members
+1. Clone the repo: `git clone https://github.com/Tofunmi-Baller/simplifyops.git ~/simplified-ops`
+2. Open Claude Code from the `simplified-ops/` folder
+3. This CLAUDE.md gives Claude all the context. Use the slash commands above — they handle the prompting for you.
+4. Run `/sync` first to see the current state of everything.
