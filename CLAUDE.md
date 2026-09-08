@@ -49,7 +49,8 @@ Team members run these instead of writing long prompts:
 |---------|-------------|
 | `/process-lead` | Research a new lead — gathers all info, assesses digital presence, creates lead file |
 | `/grade-leads` | Grade all ungraded leads as Hot / Warm / Keep |
-| `/generate-outreach` | Build prototype artifact + write personalized email for a specific lead |
+| `/verify-lead` | Re-check a lead's hook against its live site and correct Notion — required before outreach |
+| `/generate-outreach` | Build prototype artifact + write personalized email for a specific lead (verifies first) |
 | `/send-outreach` | Send the outreach email via Gmail (confirms before sending) |
 | `/sync` | Sync everything — Gmail, Notion, local files. Shows full pipeline report |
 | `/pipeline` | Quick pipeline snapshot — no changes, just status |
@@ -66,6 +67,7 @@ Team members run these instead of writing long prompts:
 - `context/contacts-and-links.md` — domain, email, booking, socials
 - `context/lead-process.md` — full lead pipeline and data structure
 - `context/grading-criteria.md` — how to classify leads (Hot/Warm/Keep)
+- `context/verification-process.md` — how to re-verify a lead before outreach (mandatory gate)
 - `context/email-templates.md` — outreach email structure and rules
 - `context/prototype-process.md` — how to build lead prototypes
 
