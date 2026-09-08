@@ -4,7 +4,7 @@ Generate a complete outreach package for a SimplifyOps lead. The user will speci
 
 2. **Read the lead file** from `leads/[company-name].md` to get all research data. If no lead file exists, run the process-lead workflow first.
 
-3. **Check the lead's owner** in the Notion Lead Pipeline database. Look up which email version the owner is assigned to in `context/email-templates.md` (Version A = 2-part, Version B = 1-part).
+3. **Check the lead's owner** in the Notion Lead Pipeline database. Look up the sender name in `context/email-templates.md` (Sender Mapping table).
 
 4. **Build a prototype** for this lead:
    - Read `context/prototype-process.md` for the process
@@ -13,22 +13,18 @@ Generate a complete outreach package for a SimplifyOps lead. The user will speci
    - Make it polished. This is the pitch. It must look like a finished product
    - Publish the artifact and save the URL
 
-5. **Write the outreach emails** based on the owner's assigned version:
+5. **Write the outreach emails** using the 2-part process:
    - Read `context/email-templates.md` for the full structure and rules
+   - **Email 1 (opener):** No links of any kind. Introduce yourself, state the observation, offer to share.
+   - **Email 2 (after reply):** Demo link + booking link. Only sent after lead replies.
    - Use "Hi {{FIRST_NAME}}," greeting, sign off with "Best," + "SimplifyOps Team"
-   - Use "we" not "I" throughout
+   - Start with "I'm {{SENDER}} from SimplifyOps. We help businesses build and fix their digital presence."
+   - Use "we" not "I" (except "I came across" and "I'm [name]")
    - No em dashes. Use periods or commas instead
    - Keep each email to 5 sentences max
-
-   **If Version A (2-part):**
-   - Email 1: Observation (bold) + proof + "We went ahead and rebuilt it... Happy to share it if you'd like to take a look." No links at all.
-   - Email 2: Demo link + nudge to interact + booking link. Only sent after lead replies.
-
-   **If Version B (1-part):**
-   - Single email: Observation (bold) + proof + demo link + nudge + booking link, all in one.
+   - Natural and conversational tone
 
 6. **Save the outreach** to `outreach/[company-name-slug].md` with:
-   - Email version (A or B)
    - Email subject line and preheader
    - Full email body for each email in markdown
    - Prototype artifact URL
@@ -38,7 +34,7 @@ Generate a complete outreach package for a SimplifyOps lead. The user will speci
 7. **Update the lead file** with the prototype link and outreach status.
 
 8. **Populate the lead's Notion page** with the full email drafts in markdown format:
-   - H2: "Outreach Emails (Version [A/B])"
+   - H2: "Outreach Email (2-part process)"
    - H3 per email with subject line and preheader
    - Full email body ready to copy and paste
 
