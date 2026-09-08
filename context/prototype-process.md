@@ -6,7 +6,7 @@ A working preview built specifically for a lead BEFORE they sign anything. It sh
 ## When to Build
 - After a lead is graded Hot or Warm
 - Before the outreach email is sent
-- The prototype link goes in the email
+- The prototype is built before outreach, but the link is NOT sent in the cold email — the first email asks whether they'd like to see it, and the link goes out in the reply once they say yes (see `context/email-templates.md`)
 
 ## What to Build
 Based on what the lead actually needs (identified during research):
@@ -37,12 +37,12 @@ Based on what the lead actually needs (identified during research):
 3. Use their brand colors if you can find them (check their website)
 4. Include real content (their business name, services, industry terms)
 5. Make it responsive
-6. Save the artifact link — it goes in the outreach email
+6. Save the artifact link — it goes in the outreach file, and into the hand-off reply once the lead asks to see it
 
 ## Quality Bar
 The prototype must be good enough that the lead thinks: "Wait, they already built this for us?" It should feel like we spent real time on it. This is what converts leads — not the email, not the pitch, the prototype.
 
 ## Storage
 - Prototype artifacts are linked in the lead's Notion record
-- The artifact URL goes in the outreach email
+- The artifact URL goes in the hand-off reply, never in the cold email
 - Keep prototypes accessible — leads may share them internally

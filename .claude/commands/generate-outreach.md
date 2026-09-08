@@ -11,20 +11,24 @@ Generate a complete outreach package for a SimplifyOps lead. The user will speci
    - Make it polished — this is the pitch. It must look like a finished product
    - Publish the artifact and save the URL
 
-4. **Write the outreach email** using the HTML template at `outreach/template.html`:
-   - Read `context/email-templates.md` for the full placeholder reference
-   - Fill all placeholders: `{{FIRST_NAME}}`, `{{PREHEADER}}`, `{{OBSERVATION}}`, `{{PROOF}}`, `{{DEMO_URL}}`, `{{SENDER}}`
+4. **Write the outreach email** using the ask-first templates in `outreach/`:
+   - Read `context/email-templates.md` first — the governing rule is **ask first, link later**
+   - **Email 1 and both follow-ups use `outreach/template.html` and carry NO prototype link.** The email says we already built the thing and asks whether they want to see it. An unfamiliar artifact URL in a cold email reads as a scam, to the person and to the spam filter. The booking link stays in — it's a known Google domain and the ordinary ask
+   - Fill: `{{FIRST_NAME}}`, `{{PREHEADER}}`, `{{OBSERVATION}}`, `{{PROOF}}`, `{{BUILT}}`, `{{SENDER}}`
    - `{{OBSERVATION}}` is the hook — the specific broken thing you found in research
    - `{{PROOF}}` is one line of their real credentials — proves you actually looked
-   - Write the filled HTML for the first email AND both follow-ups
+   - `{{BUILT}}` is what you actually built, in their words — the thing they'd be saying yes to
+   - **Also write the hand-off reply** using `outreach/template-reply.html`. This is the only email carrying `{{DEMO_URL}}`, and it only goes out after the lead replies asking to see it. Fill `{{BUILT}}` (same wording as email 1), `{{DEMO_URL}}`, `{{TRY_THIS}}`
+   - Write the filled HTML for: email 1, follow-up 1, follow-up 2, and the hand-off reply
    - Keep it short — the template structure handles the design
 
 5. **Save the outreach** to `outreach/[company-name-slug].md` with:
    - Email subject line
    - Preheader text
-   - Filled placeholder values (observation, proof, etc.)
-   - The complete filled HTML for each email version
-   - Prototype artifact URL
+   - Filled placeholder values (observation, proof, built, etc.)
+   - The complete filled HTML for each email version, with the hand-off reply clearly marked **DO NOT SEND UNTIL THEY ASK**
+   - Prototype artifact URL (held back from email 1 — it lives here and in the hand-off reply only)
+   - Note that the cold emails carry the booking link and nothing else clickable
    - Contact email address
    - Send date (leave blank for user to fill)
 

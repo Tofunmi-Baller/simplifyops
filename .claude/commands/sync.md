@@ -17,7 +17,7 @@ Run these steps in order:
 
 4. **Sync discrepancies:**
    - If Gmail shows an email was sent but lead status is still "Graded" → update to "Outreach Sent"
-   - If Gmail shows a reply received → update lead to "Follow-up" or "Booked" depending on content
+   - If Gmail shows a reply received → read it. If they asked to see the prototype, flag it as an action item to run `/send-prototype` today. Otherwise update lead to "Follow-up" or "Booked" depending on content
    - If Notion has updates not in local files → update local files
    - If local files have updates not in Notion → update Notion
 
@@ -33,6 +33,7 @@ Run these steps in order:
    - Researched: X
    - Graded: X
    - Outreach Sent: X
+   - Prototype Sent: X
    - Follow-up: X
    - Booked: X
    - In Progress: X

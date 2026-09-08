@@ -7,7 +7,7 @@ A code and digital services agency. We build what clients need — fast.
 1. **Lead intake** — receive leads, research them (LinkedIn, website, online presence)
 2. **Lead enrichment** — gather all available info, fill gaps with research
 3. **Lead grading** — hot leads, warm leads, keep/nurture leads
-4. **Outreach** — personalized email with booking link + a live prototype artifact tailored to their needs
+4. **Outreach** — personalized email that tells them we already built a prototype for them and asks if they want to see it. The cold email carries the booking link only; the prototype link goes out in the reply once they say yes
 5. **Delivery** — build and ship within 2-3 weeks
 
 ## Philosophy

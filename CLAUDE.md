@@ -10,7 +10,7 @@ We are a prototype-first, speed-focused agency. We don't sell a rigid menu — w
 1. **Lead intake** — receive leads from various sources
 2. **Lead research** — pull info from LinkedIn, website, online presence; fill gaps with research
 3. **Lead grading** — classify as hot / warm / keep-nurture
-4. **Outreach** — send personalized email with booking link + a live prototype artifact built for that specific lead
+4. **Outreach** — send a personalized email saying we already built a prototype for them and asking if they want to see it. The cold email carries the booking link only; the prototype link goes out as a reply once they ask (an unfamiliar artifact URL in a cold email reads as a scam)
 5. **Delivery** — ship within 2-3 weeks
 
 ### Services (flexible umbrella)
@@ -39,7 +39,7 @@ We are a prototype-first, speed-focused agency. We don't sell a rigid menu — w
 - `leads/` — lead files, research, grading
 - `sessions/` — session logs (one per conversation)
 - `website/` — website source files
-- `outreach/` — outreach drafts per lead (email + prototype link)
+- `outreach/` — outreach drafts per lead (ask email, follow-ups, hand-off reply + prototype link)
 - `.claude/commands/` — team skills (slash commands)
 
 ## Skills (Slash Commands)
@@ -51,7 +51,8 @@ Team members run these instead of writing long prompts:
 | `/grade-leads` | Grade all ungraded leads as Hot / Warm / Keep |
 | `/verify-lead` | Re-check a lead's hook against its live site and correct Notion — required before outreach |
 | `/generate-outreach` | Build prototype artifact + write personalized email for a specific lead (verifies first) |
-| `/send-outreach` | Send the outreach email via Gmail (confirms before sending) |
+| `/send-outreach` | Send the "want to see it?" email via Gmail — booking link, no prototype link (confirms before sending) |
+| `/send-prototype` | After the lead says yes — reply on the thread with the prototype link |
 | `/sync` | Sync everything — Gmail, Notion, local files. Shows full pipeline report |
 | `/pipeline` | Quick pipeline snapshot — no changes, just status |
 

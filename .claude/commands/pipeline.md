@@ -4,6 +4,7 @@ Show the current SimplifyOps lead pipeline status. Quick overview, no changes.
 2. **Group by grade** (Hot / Warm / Keep) and **by status** (New → Completed)
 3. **Check for action items:**
    - Any Hot leads without outreach sent?
+   - Any lead who replied asking to see the prototype but hasn't been sent it? (run `/send-prototype` — this is the most urgent item there is)
    - Any outreach sent more than 3 days ago without follow-up?
    - Any follow-ups due today?
    - Any booked calls coming up?

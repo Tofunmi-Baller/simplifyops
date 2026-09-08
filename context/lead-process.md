@@ -4,12 +4,13 @@
 1. **New** — lead received, not yet researched
 2. **Researched** — all info gathered (LinkedIn, website, online presence)
 3. **Graded** — classified as Hot / Warm / Keep
-4. **Outreach Sent** — personalized email sent with prototype link
-5. **Follow-up** — no response, follow-up email queued or sent
-6. **Booked** — call booked via calendar link
-7. **In Progress** — project started
-8. **Completed** — project delivered
-9. **Lost** — lead went cold or declined
+4. **Outreach Sent** — personalized email sent, offering the prototype (booking link only, no prototype link)
+5. **Prototype Sent** — lead replied asking to see it; prototype link sent as a reply on the thread
+6. **Follow-up** — no response, follow-up email queued or sent
+7. **Booked** — call booked via calendar link
+8. **In Progress** — project started
+9. **Completed** — project delivered
+10. **Lost** — lead went cold or declined
 
 ## Lead Data Structure
 Each lead record contains:
@@ -18,7 +19,7 @@ Each lead record contains:
 - **Assessment**: current digital presence rating (1-10), identified needs, gaps spotted
 - **Grade**: Hot / Warm / Keep (with reason)
 - **Status**: current pipeline stage
-- **Outreach**: email draft, prototype artifact link, date sent
+- **Outreach**: email draft, prototype artifact link (held until they ask), date sent, date prototype sent
 - **Follow-up**: follow-up dates, notes
 - **Dates**: date added, last updated
 
@@ -41,5 +42,5 @@ Leads are tracked in a Notion database called "SimplifyOps Leads" with:
 ## Gmail Integration
 - Outreach emails sent from admin@simplifyops.dev
 - When an email is sent, update the lead's status in Notion to "Outreach Sent"
-- Track replies — if a reply comes in, update status
+- Track replies — if a reply comes in, update status. A reply asking to see the prototype is the trigger for `/send-prototype`: reply on that same thread with the link, then set status to "Prototype Sent"
 - Sync command pulls latest Gmail activity and updates Notion
