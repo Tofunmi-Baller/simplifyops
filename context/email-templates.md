@@ -4,13 +4,54 @@
 - Short. Nobody reads long cold emails. 5-7 sentences max.
 - Personal. Reference something specific about THEIR business. Never generic.
 - Value first. Show you already understand their problem before pitching.
-- Speed is the hook. "2-3 weeks" is the differentiator — use it.
 - Prototype tease. We already built something for them — link it.
-- One CTA. Book a call. That's it. Don't give them multiple options.
+- Two links: "View the demo" (bold link, own line) + "grab fifteen minutes" (inline link to booking).
+- Plain design — white background, dark text, no branding. Should look like a real person typed it in Gmail, not a marketing campaign.
 
-## Email Structure
+## HTML Template
+The canonical email template lives at `outreach/template.html`. Always use it when sending outreach — never send plain-text-only.
 
-### Subject Line
+### Email Palette (deliberately plain)
+| Token     | Hex       | Usage                              |
+|-----------|-----------|------------------------------------|
+| ground    | `#FFFFFF` | White background                   |
+| text      | `#222222` | Body copy                          |
+| link      | `#1155CC` | Links (Gmail's native blue)        |
+| muted     | `#666666` | Sign-off "SimplifyOps" line        |
+
+The old dark-branded template is archived at `outreach/template-v3-dark.html` if ever needed.
+
+### Placeholders
+Fill these when generating outreach for a lead:
+
+| Placeholder        | What it is                                                    | Example                                                        |
+|--------------------|---------------------------------------------------------------|----------------------------------------------------------------|
+| `{{FIRST_NAME}}`   | Lead's first name                                             | Chuck                                                          |
+| `{{PREHEADER}}`    | ~50 chars, extends the subject line, never repeats it         | We rebuilt your portfolio from scratch                         |
+| `{{OBSERVATION}}`  | The specific broken thing you noticed (the hook)              | Your site takes 8 seconds to load and the portfolio page 404s  |
+| `{{PROOF}}`        | One line of their real credentials — proves you did research  | You've shipped 3 major projects this year                      |
+| `{{DEMO_URL}}`     | The published artifact link (the prototype)                   | https://claude.ai/artifacts/...                                |
+| `{{SENDER}}`       | Whoever is sending                                            | SimplifyOps Team                                               |
+
+### Template Structure
+1. **Greeting** — `{{FIRST_NAME}},`
+2. **Observation** — bold text, the only bold line (proves it's not a mail merge)
+3. **Proof line** — `{{PROOF}} — so that gap seemed worth closing.`
+4. **Transition** — "I rebuilt it. Working version, using your real projects and details:"
+5. **Demo link** — bold underlined link on its own line
+6. **Nudge** — "The contact form on it works, so send yourself one and see."
+7. **Booking** — inline link: "grab fifteen minutes here"
+8. **Opt-out** — "If it's not for you, keep the build — no strings."
+9. **Sign-off** — sender name + "SimplifyOps" in gray
+
+### Email Client Compatibility
+- **Outlook**: MSO conditional wrapper for max-width (Outlook ignores `max-width`)
+- **Dark mode**: plain white email inverts naturally — nothing to fight
+- **No images**: text-only, no tracking pixels — helps deliverability on a new domain
+- **No web fonts**: system sans-serif everywhere
+- **Left-aligned**: not centered — centered narrow columns look like a template
+
+## Subject Lines
 Personalized, curiosity-driving. Examples:
 - "Quick question about [Company]'s website"
 - "[Company] — noticed something on your site"
@@ -19,54 +60,25 @@ Personalized, curiosity-driving. Examples:
 
 Never: "Partnership opportunity", "Our services", "Let's connect"
 
-### Body Template
-```
-Hi [First Name],
+## Follow-ups
 
-[One sentence about something specific you noticed about their business — their website, a product launch, a LinkedIn post, a gap you spotted. Show you actually looked.]
-
-[One sentence about the specific problem or opportunity you identified for them.]
-
-[One sentence about what SimplifyOps does and how fast we work — mention "2-3 weeks" naturally.]
-
-We actually put together a quick preview of what [specific deliverable] could look like for [Company]: [prototype link]
-
-If it looks interesting, grab 15 minutes here: https://calendar.app.google/aYy6MJaq9zJAm7nQ9
-
-Best,
-SimplifyOps Team
-```
-
-### Follow-up (3-5 days after first email, if no response)
-```
-Hi [First Name],
-
-Just circling back — did you get a chance to look at the preview we put together for [Company]?
-
-[One new observation or value add — maybe a competitor comparison, a specific metric, or a new angle.]
-
-Happy to walk you through it: https://calendar.app.google/aYy6MJaq9zJAm7nQ9
-
-Best,
-SimplifyOps Team
-```
+### Follow-up 1 (3-5 days after first email, if no response)
+Use the same HTML template structure but adjust the body:
+- Reference the prototype again
+- Add one new observation or value angle
+- Keep the same button pair (demo + booking)
 
 ### Follow-up 2 (5-7 days after follow-up 1, final)
-```
-Hi [First Name],
-
-Last one from me — the preview we built for [Company] is still live if you want to check it out: [prototype link]
-
-If the timing isn't right, no worries. We'll be here when it is.
-
-Best,
-SimplifyOps Team
-```
+Shorter version — just the prototype link and a soft close:
+- "Last one from me"
+- Prototype link still live
+- "If the timing isn't right, no worries"
 
 ## Rules
 - Never send more than 3 emails total (initial + 2 follow-ups)
 - Always personalize — never send the same email to two leads
 - Always include the prototype link in at least the first email
-- Always include the booking link
-- Sign off as "SimplifyOps Team" (no individual names)
+- Always include the booking link: https://calendar.app.google/aYy6MJaq9zJAm7nQ9
+- Sign off as "SimplifyOps Team" (no individual names) unless specified
 - Send from admin@simplifyops.dev
+- Always use the HTML template at `outreach/template.html` — fill the placeholders

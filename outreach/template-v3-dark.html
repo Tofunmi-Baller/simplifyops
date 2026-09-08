@@ -1,0 +1,177 @@
+<!--
+  SimplifyOps cold outreach email template — v3 (brand palette)
+
+  PALETTE, pulled from the simplifyops.dev homepage:
+
+    ground     #09090B   page background (near-black)
+    panel      #101014   raised block, the observation line
+    cream      #EFEBE2   headline / primary text
+    body       #B4B8BF   body copy on dark
+    muted      #7E848C   secondary, sign-off
+    hairline   #26262C   borders
+    indigo     #6366F1   gradient start
+    cyan       #0EA5E9   gradient end
+    blend      #3B84F0   flat mid-point, used wherever gradients can't render
+
+  DARK EMAIL — WHAT IT COSTS AND HOW THIS HANDLES IT
+
+  1. Gradients don't exist in Outlook. The primary button uses a VML
+     <v:fill type="gradient"> for Outlook and a CSS linear-gradient elsewhere,
+     with #3B84F0 as the flat background-color underneath both. Any client
+     that supports neither still gets a solid blue button, never a bare link.
+
+  2. Dark mode inverts things. Clients that force-invert will try to flip a
+     dark email to light and usually make a mess. Every table here carries an
+     explicit bgcolor attribute as well as a CSS background, which is what
+     stops most clients re-colouring it.
+
+  3. Deliverability. Dark, heavily-styled mail reads more like a campaign than
+     a person, which matters on a domain with no sending history. Mitigated by
+     keeping it image-free, pixel-free, short, and under a single column.
+     If reply rates disappoint, flip the ground to #FFFFFF and the text to
+     #16191C and change nothing else — the accents work on both.
+
+  4. Web fonts don't load in most email clients. This falls back to the system
+     sans, so it will NOT look like the rounded geometric on the website. That
+     is expected and not worth fighting; forcing a webfont costs more in
+     rendering bugs than it gains in fidelity.
+
+  PLACEHOLDERS
+    {{FIRST_NAME}}   Chuck
+    {{PREHEADER}}    ~50 chars, extends the subject, never repeats it
+    {{OBSERVATION}}  the specific broken thing (Hook column in Notion)
+    {{PROOF}}        one line of their real credentials
+    {{DEMO_URL}}     the published artifact link
+    {{SENDER}}       whoever is sending
+-->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;height:0;width:0">
+  {{PREHEADER}}
+  &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
+</div>
+
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#09090B" style="border-collapse:collapse;background:#09090B">
+<tr>
+<td align="center" style="padding:32px 20px">
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="560" style="width:560px;max-width:560px;border-collapse:collapse;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.6;color:#B4B8BF;text-align:left">
+
+    <!-- wordmark. text, not an image, deliberately -->
+    <tr><td style="padding:0 0 28px;font-size:17px;font-weight:700;color:#EFEBE2;letter-spacing:-0.2px">
+      Simplify<span style="color:#0EA5E9">Ops</span>
+    </td></tr>
+
+    <tr><td style="padding:0 0 18px;color:#EFEBE2;font-size:16px">
+      {{FIRST_NAME}},
+    </td></tr>
+
+    <!-- the observation. the only line that proves this isn't a mail merge -->
+    <tr><td style="padding:0 0 22px">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#101014" style="border-collapse:collapse;background:#101014;border-radius:6px">
+        <tr>
+          <td width="3" bgcolor="#0EA5E9" style="width:3px;background:#0EA5E9;font-size:0;line-height:0">&nbsp;</td>
+          <td style="padding:16px 20px;font-size:16px;line-height:1.55;color:#EFEBE2">
+            {{OBSERVATION}}
+          </td>
+        </tr>
+      </table>
+    </td></tr>
+
+    <tr><td style="padding:0 0 18px">
+      {{PROOF}} — so that gap seemed worth closing.
+    </td></tr>
+
+    <tr><td style="padding:0 0 26px;color:#EFEBE2">
+      I rebuilt it. Working version, using your real projects and details:
+    </td></tr>
+
+    <!-- buttons -->
+    <tr><td style="padding:0 0 26px">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse">
+        <tr>
+          <!-- primary: gradient, with VML + flat fallbacks -->
+          <td style="padding:0 10px 0 0">
+            <!--[if mso]>
+            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+              href="{{DEMO_URL}}" style="height:46px;v-text-anchor:middle;width:176px" arcsize="14%" stroke="f">
+              <v:fill type="gradient" color="#6366F1" color2="#0EA5E9" angle="90" />
+              <w:anchorlock/>
+              <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:15px;font-weight:bold">View the demo</center>
+            </v:roundrect>
+            <![endif]-->
+            <!--[if !mso]><!-- -->
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate">
+              <tr><td bgcolor="#3B84F0" style="border-radius:6px;background-color:#3B84F0;background-image:linear-gradient(100deg,#6366F1 0%,#0EA5E9 100%)">
+                <a href="{{DEMO_URL}}" style="display:inline-block;padding:14px 30px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;font-weight:600;line-height:1;color:#ffffff;text-decoration:none;border-radius:6px">View the demo</a>
+              </td></tr>
+            </table>
+            <!--<![endif]-->
+          </td>
+
+          <!-- secondary: outlined, matches the site's ghost button -->
+          <td style="padding:0">
+            <!--[if mso]>
+            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+              href="https://calendar.app.google/aYy6MJaq9zJAm7nQ9" style="height:46px;v-text-anchor:middle;width:176px" arcsize="14%"
+              strokecolor="#33333B" strokeweight="1px" fillcolor="#101014">
+              <w:anchorlock/>
+              <center style="color:#EFEBE2;font-family:Arial,sans-serif;font-size:15px;font-weight:bold">Book a call</center>
+            </v:roundrect>
+            <![endif]-->
+            <!--[if !mso]><!-- -->
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:separate">
+              <tr><td bgcolor="#101014" style="border-radius:6px;background:#101014;border:1px solid #33333B">
+                <a href="https://calendar.app.google/aYy6MJaq9zJAm7nQ9" style="display:inline-block;padding:13px 30px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;font-weight:600;line-height:1;color:#EFEBE2;text-decoration:none;border-radius:6px">Book a call</a>
+              </td></tr>
+            </table>
+            <!--<![endif]-->
+          </td>
+        </tr>
+      </table>
+    </td></tr>
+
+    <tr><td style="padding:0 0 22px">
+      The contact form on it works, so send yourself one and see.
+    </td></tr>
+
+    <tr><td style="padding:0 0 28px;color:#7E848C">
+      If it's not for you, keep the build — no strings. Reply and tell me to
+      stop and I won't write again.
+    </td></tr>
+
+    <tr><td style="padding:22px 0 0;border-top:1px solid #26262C">
+      <span style="color:#EFEBE2">{{SENDER}}</span><br>
+      <span style="color:#7E848C;font-size:14px">SimplifyOps &nbsp;·&nbsp; Built and shipped in weeks, not months</span>
+    </td></tr>
+
+  </table>
+
+</td>
+</tr>
+</table>
+
+<!--
+=============================================================================
+PLAIN TEXT ALTERNATIVE — keep in sync with the HTML above.
+=============================================================================
+
+{{FIRST_NAME}},
+
+{{OBSERVATION}}
+
+{{PROOF}} — so that gap seemed worth closing.
+
+I rebuilt it. Working version, using your real projects and details:
+
+{{DEMO_URL}}
+
+The contact form on it works, so send yourself one and see.
+
+Fifteen minutes to talk it through:
+https://calendar.app.google/aYy6MJaq9zJAm7nQ9
+
+If it's not for you, keep the build — no strings. Reply and tell me to stop
+and I won't write again.
+
+{{SENDER}}
+SimplifyOps — built and shipped in weeks, not months
+-->

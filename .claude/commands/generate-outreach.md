@@ -9,16 +9,19 @@ Generate a complete outreach package for a SimplifyOps lead. The user will speci
    - Make it polished — this is the pitch. It must look like a finished product
    - Publish the artifact and save the URL
 
-3. **Write the outreach email** following `context/email-templates.md`:
-   - Personalize every line — reference specific things from the research
-   - Include the prototype link
-   - Include the booking link: https://calendar.app.google/aYy6MJaq9zJAm7nQ9
-   - Write the first email AND both follow-ups
-   - Keep it short (5-7 sentences for the main email)
+3. **Write the outreach email** using the HTML template at `outreach/template.html`:
+   - Read `context/email-templates.md` for the full placeholder reference
+   - Fill all placeholders: `{{FIRST_NAME}}`, `{{PREHEADER}}`, `{{OBSERVATION}}`, `{{PROOF}}`, `{{DEMO_URL}}`, `{{SENDER}}`
+   - `{{OBSERVATION}}` is the hook — the specific broken thing you found in research
+   - `{{PROOF}}` is one line of their real credentials — proves you actually looked
+   - Write the filled HTML for the first email AND both follow-ups
+   - Keep it short — the template structure handles the design
 
 4. **Save the outreach** to `outreach/[company-name-slug].md` with:
    - Email subject line
-   - Email body (all 3 versions)
+   - Preheader text
+   - Filled placeholder values (observation, proof, etc.)
+   - The complete filled HTML for each email version
    - Prototype artifact URL
    - Contact email address
    - Send date (leave blank for user to fill)

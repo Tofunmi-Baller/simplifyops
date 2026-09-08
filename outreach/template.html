@@ -1,0 +1,124 @@
+<!--
+  SimplifyOps cold outreach email template — v4 (plain)
+
+  WHY IT LOOKS LIKE THIS
+
+  Cold email gets replies when it reads like one person writing to another.
+  Designed email — dark panels, gradients, wordmarks, buttons — reads like a
+  campaign, and campaigns get archived. So this template is deliberately
+  boring: white ground, dark text, system font, left-aligned, no logo, no
+  images, no tracking pixel, two links. It should be indistinguishable from
+  something typed straight into Gmail.
+
+  The observation is the only line that proves the email isn't a mail merge,
+  so it is the one thing set in bold. Nothing else is emphasised.
+
+  COMPATIBILITY NOTES
+  - Table-based layout so it renders the same in Outlook, Gmail, Apple Mail.
+  - Outer table is 100% wide; inner column is capped at 560px with an
+    MSO conditional wrapper, since Outlook ignores max-width.
+  - Left-aligned, not centred. A centred narrow column on a wide screen is
+    the tell of a template.
+  - Link colour is Gmail's own default (#1155CC) so links look native.
+  - Dark mode: with a plain white email, clients that invert simply invert.
+    That is the same thing they do to a real email, so nothing to fight.
+  - No web fonts. System sans everywhere.
+
+  PLACEHOLDERS
+    {{FIRST_NAME}}   Chuck
+    {{PREHEADER}}    ~50 chars, extends the subject, never repeats it
+    {{OBSERVATION}}  the specific broken thing (Hook column in Notion)
+    {{PROOF}}        one line of their real credentials
+    {{DEMO_URL}}     the published artifact link
+    {{SENDER}}       whoever is sending
+-->
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;height:0;width:0;font-size:1px;line-height:1px">
+  {{PREHEADER}}
+  &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
+</div>
+
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#FFFFFF" style="border-collapse:collapse;background:#FFFFFF">
+<tr>
+<td align="left" style="padding:20px">
+
+  <!--[if mso]>
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="560"><tr><td>
+  <![endif]-->
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;max-width:560px;border-collapse:collapse;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#222222;text-align:left">
+
+    <tr><td style="padding:0 0 16px;color:#222222">
+      {{FIRST_NAME}},
+    </td></tr>
+
+    <!-- the observation. bold, and the only bold line in the email -->
+    <tr><td style="padding:0 0 16px;color:#222222;font-weight:bold">
+      {{OBSERVATION}}
+    </td></tr>
+
+    <tr><td style="padding:0 0 16px;color:#222222">
+      {{PROOF}} &#8212; so that gap seemed worth closing.
+    </td></tr>
+
+    <tr><td style="padding:0 0 8px;color:#222222">
+      I rebuilt it. Working version, using your real projects and details:
+    </td></tr>
+
+    <!-- demo link. on its own line so it's easy to find and tap -->
+    <tr><td style="padding:0 0 16px">
+      <a href="{{DEMO_URL}}" style="color:#1155CC;text-decoration:underline;font-weight:bold;font-size:16px">View the demo</a>
+    </td></tr>
+
+    <tr><td style="padding:0 0 16px;color:#222222">
+      The contact form on it works, so send yourself one and see.
+    </td></tr>
+
+    <tr><td style="padding:0 0 16px;color:#222222">
+      If you want to talk it through, <a href="https://calendar.app.google/aYy6MJaq9zJAm7nQ9" style="color:#1155CC;text-decoration:underline">grab fifteen minutes here</a>.
+    </td></tr>
+
+    <tr><td style="padding:0 0 24px;color:#222222">
+      If it's not for you, keep the build &#8212; no strings. Reply and tell me to stop and I won't write again.
+    </td></tr>
+
+    <tr><td style="padding:0;color:#222222">
+      {{SENDER}}<br>
+      <span style="color:#666666">SimplifyOps</span>
+    </td></tr>
+
+  </table>
+
+  <!--[if mso]>
+  </td></tr></table>
+  <![endif]-->
+
+</td>
+</tr>
+</table>
+
+<!--
+=============================================================================
+PLAIN TEXT ALTERNATIVE — keep in sync with the HTML above.
+=============================================================================
+
+{{FIRST_NAME}},
+
+{{OBSERVATION}}
+
+{{PROOF}} — so that gap seemed worth closing.
+
+I rebuilt it. Working version, using your real projects and details:
+
+{{DEMO_URL}}
+
+The contact form on it works, so send yourself one and see.
+
+If you want to talk it through, grab fifteen minutes here:
+https://calendar.app.google/aYy6MJaq9zJAm7nQ9
+
+If it's not for you, keep the build — no strings. Reply and tell me to stop
+and I won't write again.
+
+{{SENDER}}
+SimplifyOps
+-->
