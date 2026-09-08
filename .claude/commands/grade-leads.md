@@ -6,11 +6,12 @@ Grade all ungraded leads in the SimplifyOps pipeline.
 4. **For each ungraded lead:**
    - Review all research data in the lead file
    - Apply the grading criteria
-   - Assign Hot / Warm / Keep with a one-sentence reason
+   - Assign Hot / Warm / Skip with a one-sentence reason
    - Update the lead file with the grade
    - Update the status to "Graded"
+   - **If graded SKIP, delete the lead from the Notion Lead Pipeline immediately.** Do not keep it. Also delete the local lead file from `leads/`.
 
-5. **Update Notion** with all new grades
+5. **Update Notion** with all new grades (skip any leads that were deleted)
 
 6. **Report:**
    ```
@@ -18,7 +19,7 @@ Grade all ungraded leads in the SimplifyOps pipeline.
    ──────────────────
    [Company] → Hot — [reason]
    [Company] → Warm — [reason]
-   [Company] → Keep — [reason]
+   [Company] → Skip — [reason] — DELETED FROM NOTION
    
    Next: Run /generate-outreach [company] for Hot leads
    ```

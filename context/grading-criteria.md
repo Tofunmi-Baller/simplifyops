@@ -20,16 +20,19 @@ A lead is WARM when 2+ of these are true:
 - Active online but not producing their own content well
 - Could benefit from automation or internal tools
 
-## Keep (Nurture — check back later)
-A lead is KEEP when:
-- Very early stage, likely no budget yet
-- Already has a solid digital presence (they don't need us right now)
-- No clear immediate need identified
-- Large enterprise with long procurement cycles
-- Good fit but wrong timing
+## Skip (Delete immediately)
+A lead is SKIP when:
+- No real business or unable to verify the company exists
+- No contact info or unreachable decision-maker
+- Completely wrong industry or fit
+- Already has a strong digital presence with no clear gap
+- No budget indicators whatsoever
+
+**When a lead is graded SKIP, delete it from the Notion Lead Pipeline immediately.** Do not keep it for later. Clean pipeline, no dead weight.
 
 ## Grading Notes
 - Always explain WHY a lead got its grade in one sentence
-- Grade can change — a Keep that starts hiring becomes Warm or Hot
-- When in doubt, grade higher (Warm over Keep) — better to reach out than miss
+- Grade can change. A Warm lead that starts hiring becomes Hot
+- When in doubt, grade higher (Warm over Skip). Better to reach out than miss
 - Re-grade leads every 2 weeks if they haven't moved in the pipeline
+- SKIP leads get deleted from Notion on the spot. No exceptions
