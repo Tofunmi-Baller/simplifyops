@@ -17,6 +17,11 @@ The user may say "enrich lead", "enrich leads", "enrich Baller's leads", etc.
    - Every email follows the same structure, no exceptions
    - **No links of any kind in Email 1.** No demo links, no booking links, no URLs. Nothing clickable.
    - Use the `{{SENDER}}` name from the lead's owner (check `context/email-templates.md` for the sender mapping)
+   - **Subject:** "{{FIRST_NAME}}, please check this out". Before writing it, confirm the first
+     name is the one on this lead's record, capitalised. If the record has no usable first name,
+     flag the lead in step 6 and write no subject for it. Never fall back to the email address or
+     the domain, and never carry the previous lead's name forward. When generating a batch, the
+     subject name and the "Hi ..." greeting must be the same word on every single lead.
    - Structure:
      1. "Hi {{FIRST_NAME}},"
      2. "I'm {{SENDER}} from SimplifyOps. We help businesses build and fix their digital presence."
