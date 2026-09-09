@@ -85,6 +85,20 @@ Examples:
 
 Never: "Quick question about...", "Partnership opportunity", "Our services", "Let's connect", "Built something for..."
 
+### Subject line checks (all four have failed in live sends)
+The subject is the only thing every recipient is guaranteed to read, so check it against the
+recipient before the email goes out:
+- **Never an email address or domain.** If `{{FIRST_NAME}}` is empty the merge must fail loudly,
+  not fall back to the address. `kristen@zettavp.com` went out as a live subject line.
+- **The name must be this lead's name.** It must match the "Hi ..." greeting in the body. A
+  subject reading "Kindly check this out, David" on an email opening "Hi Leo" went out because a
+  previous lead's name was left in place.
+- **Capitalise it.** "Please take a look at this, jerry" went out lowercase.
+- **No unresolved `{{...}}` placeholders.**
+
+`/send-outreach` enforces these before sending, but generation should not produce them in the
+first place.
+
 ## Follow-ups (if no response to Email 1)
 Still no links. Same 2-part rule applies.
 
