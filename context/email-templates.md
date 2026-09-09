@@ -75,12 +75,13 @@ The canonical email template lives at `outreach/template.html`. Use it when send
 - **Left-aligned**: not centered
 
 ## Subject Lines
-Simple and direct. No catchy hooks or curiosity bait. Just tell them to read the message.
+Simple and direct with their first name. No catchy hooks or curiosity bait.
+
+Format: "{{FIRST_NAME}}, please check this out"
 
 Examples:
-- "Please check this out"
-- "Please take a look at this"
-- "Please read this"
+- "Larry, please check this out"
+- "Susan, please check this out"
 
 Never: "Quick question about...", "Partnership opportunity", "Our services", "Let's connect", "Built something for..."
 
